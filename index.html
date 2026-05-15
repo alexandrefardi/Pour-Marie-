@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz de Révision</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ÉCRAN D'ACCUEIL -->
+  <div id="screen-home" class="screen active">
+    <div class="card home-card">
+      <h1 id="quiz-title">Quiz de Révision</h1>
+      <p id="quiz-description">Testez vos connaissances avec ce quiz interactif.</p>
+      <div class="home-meta">
+        <span id="total-questions-label"></span>
+      </div>
+      <button id="btn-start" class="btn btn-primary">Commencer le quiz</button>
+    </div>
+  </div>
+
+  <!-- ÉCRAN DE QUESTION -->
+  <div id="screen-quiz" class="screen">
+    <div class="quiz-header">
+      <div class="progress-bar-wrapper">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <div class="quiz-meta">
+        <span id="question-counter">Question 1 / 10</span>
+        <span id="score-live">Score : 0</span>
+      </div>
+    </div>
+
+    <div class="card question-card">
+      <p id="question-category" class="category-badge"></p>
+      <h2 id="question-text">La question apparaît ici.</h2>
+
+      <div id="answers-container"></div>
+
+      <div id="feedback" class="feedback hidden">
+        <p id="feedback-text"></p>
+        <p id="explanation-text" class="explanation"></p>
+        <button id="btn-next" class="btn btn-primary">Question suivante</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ÉCRAN DE RÉSULTATS -->
+  <div id="screen-results" class="screen">
+    <div class="card results-card">
+      <div id="result-emoji" class="result-emoji">🎉</div>
+      <h2 id="result-title">Quiz terminé !</h2>
+      <p id="result-score" class="result-score"></p>
+      <p id="result-message" class="result-message"></p>
+
+      <div id="review-list" class="review-list"></div>
+
+      <div class="results-actions">
+        <button id="btn-retry" class="btn btn-secondary">Recommencer</button>
+        <button id="btn-home" class="btn btn-primary">Accueil</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="quiz-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
